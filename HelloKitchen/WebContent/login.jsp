@@ -287,8 +287,6 @@ $(document).ready(function () {
 		});
 	}
 
-
-	//--------------- 臉書登入實作區結束  ----------------
 	//--------------- 臉書CSS  ----------------
 	var finished_rendering = function() {
 		console.log("finished rendering plugins");
