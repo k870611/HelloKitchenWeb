@@ -126,6 +126,9 @@ public class AndroidLoginAccountServlet extends HttpServlet {
 
 	/*處理userToken(firebase)*/
 	private void processToken (String member_id, String phoneToken) throws SQLException {
+		
+		System.out.println("member_id--->" + member_id);
+		
 		Token myToken = new Token(member_id, phoneToken);
 		if (!myTokenFactory.isExistByPK(myToken)) {
 			if (myTokenFactory.Insert(myToken)) {

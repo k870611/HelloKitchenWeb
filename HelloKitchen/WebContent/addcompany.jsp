@@ -228,13 +228,13 @@
                         </div>
                         <div class="wizard-footer height-wizard">
                             <div class="pull-right">
-                                <input id="next" type='button' class='btn btn-next btn-fill btn-warning btn-wd btn-sm' name='next' value='Next' />
-                                <input type='submit' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='finish' value='Finish' />
+                                <input id="next" type='button' class='btn btn-next btn-fill btn-warning btn-wd btn-sm' name='next' value='下一頁' />
+                                <input type='submit' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='finish' value='送出' />
 
                             </div>
 
                             <div class="pull-left">
-                                <input type='button' class='btn btn-previous btn-fill btn-default btn-wd btn-sm' name='previous' value='Previous' />
+                                <input type='button' class='btn btn-previous btn-fill btn-default btn-wd btn-sm' name='previous' value='上一頁' />
                             </div>
                             <div class="clearfix"></div>
                         </div>

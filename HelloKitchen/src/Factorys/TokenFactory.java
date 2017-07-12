@@ -156,7 +156,7 @@ public class TokenFactory extends AccountManager implements java.io.Serializable
 				// member_email, String member_password, String member_tel,
 				// String member_fb)
 				Token tempT = new Token(rs.getNString("userId"), rs.getNString("PhoneToken"));
-				this.hereDataSet.put(tempT.getUserId().toString(), tempT);
+				this.hereDataSet.put(tempT.getUserId().toString().toLowerCase(), tempT);
 				count++;
 			}
 			rs.close();

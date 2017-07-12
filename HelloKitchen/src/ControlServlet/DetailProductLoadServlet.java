@@ -86,11 +86,11 @@ public class DetailProductLoadServlet extends HttpServlet {
 
 /*material*/	out.write("<div class='recipe'><h2>所需材料</h2><div class='ingredients'>"+material+"</div></div>");
 /*cover*/		out.write("<div class='comments'><h3>步驟</h3>");
-				
+				int count =1;
 				for(RecipeMethod rm:ALrmethod){
 					method=rm.getMethod_detail();
-					out.write("<div class='comment'><div class='commenttext'>"+method+"</div></div>");
-
+					out.write("<div class='comment'><div class='commenttext'>"+count+"."+method+"</div></div>");
+					count++;
 					
 				}
 

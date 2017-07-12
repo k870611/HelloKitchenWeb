@@ -88,12 +88,12 @@
                                                     <input name="Name" type="text" class="form-control" placeholder="黃金開口笑" required>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>幾人份</label>
-                                                    <input name="amount" type="text" class="form-control" value="1人份">
+                                                    <label>幾人份(份)</label>
+                                                    <input name="amount" type="text" class="form-control" value="1">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>大約料理時間</label>
-                                                    <input name="cooktime" type="text" class="form-control" value="5分鐘">
+                                                    <label>大約料理時間(分鐘)</label>
+                                                    <input name="cooktime" type="text" class="form-control" value="5">
                                                 </div>
                                             </div>
                                             <div class="col-sm-10 col-sm-offset-1">
@@ -127,8 +127,8 @@
 
                                             <div id="showBlock"></div>
                                             <div class="col-sm-7 col-sm-offset-1">
-                                                <input type="button" value="addItem" class='btn btn-fill btn-warning btn-wd btn-sm addItem' name='next' />
-                                                <input type="button" value="del" class='btn btn-fill btn-default btn-wd btn-sm' onclick="deltxt('+txtId+')">
+                                                <input type="button" value="新增" class='btn btn-fill btn-warning btn-wd btn-sm addItem' name='next' />
+                                                <input type="button" value="刪除" class='btn btn-fill btn-default btn-wd btn-sm' onclick="deltxt('+txtId+')">
                                             </div>
                                         </div>
 
@@ -150,8 +150,8 @@
 
                                             <div id="addProcess"></div>
                                             <div class="col-sm-7 col-sm-offset-1">
-                                                <input type="button" value="addProcess" class='btn btn-fill btn-warning btn-wd btn-sm addProcess' name='next' />
-                                                <input type="button" value="del" class='btn btn-fill btn-default btn-wd btn-sm' onclick="delprocess('+process+')">
+                                                <input type="button" value="新增" class='btn btn-fill btn-warning btn-wd btn-sm addProcess' name='next' />
+                                                <input type="button" value="刪除" class='btn btn-fill btn-default btn-wd btn-sm' onclick="delprocess('+process+')">
                                             </div>
 
 
@@ -161,13 +161,13 @@
                                 </div>
                                 <div class="wizard-footer height-wizard">
                                     <div class="pull-right">
-                                        <input id="next" type='button' class='btn btn-next btn-fill btn-warning btn-wd btn-sm' name='next' value='Next' />
-                                        <input type='submit' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='finish' value='Finish' />
+                                        <input id="next" type='button' class='btn btn-next btn-fill btn-warning btn-wd btn-sm' name='next' value='下一頁' />
+                                        <input type='submit' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='finish' value='送出' />
 
                                     </div>
 
                                     <div class="pull-left">
-                                        <input type='button' class='btn btn-previous btn-fill btn-default btn-wd btn-sm' name='previous' value='Previous' />
+                                        <input type='button' class='btn btn-previous btn-fill btn-default btn-wd btn-sm' name='previous' value='上一頁' />
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>

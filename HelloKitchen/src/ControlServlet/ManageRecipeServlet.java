@@ -131,9 +131,9 @@ public class ManageRecipeServlet extends HttpServlet {
 
 /*食譜*/			out.write("<div class='col-sm-6'><div class='form-group'><label>標題 <small>(必填)</small></label>"
 						+ "<input name='Name' type='text' class='form-control' value='"+name+"' required></div>"
-						+ "<div class='form-group'><label>幾人份</label>"
+						+ "<div class='form-group'><label>幾人份(份)</label>"
 						+ "<input name='amount' type='text' class='form-control' value='"+amount+"'></div>"
-						+ "<div class='form-group'><label>大約料理時間</label>"
+						+ "<div class='form-group'><label>大約料理時間(分鐘)</label>"
 						+ "<input name='cooktime' type='text' class='form-control' value='"+cooktime+"'></div></div>");
 
 /*細項*/			out.write("<div class='col-sm-10 col-sm-offset-1'><div class='form-group'><label>食譜簡介 <small>(必填)</small></label>"
@@ -173,13 +173,13 @@ public class ManageRecipeServlet extends HttpServlet {
 				}
 			
 				out.write("<div id='addProcess'></div><div class='col-sm-4 col-sm-offset-1'>"
-						+ "<input type='button' value='addProcess' class='btn btn-fill btn-warning btn-wd btn-sm addProcess' name='next' /></div>"
-						+ "<div class='col-sm-3'><input type='button' value='del' class='btn btn-fill btn-default btn-wd btn-sm delProcess'></div></div></div></div>");
+						+ "<input type='button' value='新增' class='btn btn-fill btn-warning btn-wd btn-sm addProcess' name='next' /></div>"
+						+ "<div class='col-sm-3'><input type='button' value='刪除' class='btn btn-fill btn-default btn-wd btn-sm delProcess'></div></div></div></div>");
 				
 				out.write("<div class='wizard-footer height-wizard'><div class='pull-right'>"
-						+ "<input type='button' class='btn btn-next btn-fill btn-warning btn-wd btn-sm' name='next' value='Next' />"
-						+ "<input type='submit' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='finish' value='Finish' /></div>"
-						+ "<div class='pull-left'><input type='button' class='btn btn-previous btn-fill btn-default btn-wd btn-sm' name='previous' value='Previous' /></div><div class='clearfix'></div></div>"
+						+ "<input type='button' class='btn btn-next btn-fill btn-warning btn-wd btn-sm' name='next' value='下一頁' />"
+						+ "<input type='submit' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='finish' value='送出' /></div>"
+						+ "<div class='pull-left'><input type='button' class='btn btn-previous btn-fill btn-default btn-wd btn-sm' name='previous' value='上一頁' /></div><div class='clearfix'></div></div>"
 						+ "<input type='hidden' name='rid' value='"+ALrc.getRecipe_id()+"'/></form>");
 					
 				out.write("</div></div></div></div></div>"

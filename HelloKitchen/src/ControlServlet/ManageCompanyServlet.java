@@ -10,11 +10,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import EntityComponents.Company;
 import EntityComponents.CompanyPictures;
 import Factorys.CompanyFactory;
 import Factorys.CompanyPictureFactory;
+import Modules.SessionStamp;
 import Utility.GeneralVarName;
 
 /**
@@ -61,13 +63,19 @@ public class ManageCompanyServlet extends HttpServlet {
 		if(!mpd.equalsIgnoreCase("null")){
 			//out.write("into success:"+mpd+"is not null"+"<br/>");
 			UpdateCompany();
-		}else{
+		}else{			
+			HttpSession mySession = request.getSession();
+			SessionStamp st = (SessionStamp)request.getSession().getAttribute(GeneralVarName.Session_CompanyLogin);
+			String CompanyId=st.getLoginAccount();
+			
+			Company ALcf=(Company)cf.sreachByPK(CompanyId);
+			
 			out.write("<div class='image-container set-full-height' style='position:absolute;top:4%;z-index:-1;'>"
 					+ "<div class='container'><div class='row'>"
 					+ "<div class='col-sm-8 col-sm-offset-2'>"
 					+ "<div class='wizard-container'>"
 					+ "<div class='card wizard-card' data-color='orange' id='wizardProfile'>");
-			out.write("<img src='images/logo.png' style='position:absolute;left:35%;top:33%'/> ");
+			out.write("<img src='"+ALcf.getCompany_logo()+"' style='width:226px;height:224px;position:absolute;left:35%;top:33%'/> ");
 			out.write("</div></div></div></div></div></div>");
 		}
 		
@@ -176,10 +184,10 @@ public class ManageCompanyServlet extends HttpServlet {
 		
 		
 		out.write("<div class='wizard-footer height-wizard'><div class='pull-right'>"
-				+ "<input id='next' type='button' class='btn btn-next btn-fill btn-warning btn-wd btn-sm' name='next' value='Next' />"
-				+ "<input type='submit' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='finish' value='Finish' /></div>"
+				+ "<input id='next' type='button' class='btn btn-next btn-fill btn-warning btn-wd btn-sm' name='next' value='下一頁' />"
+				+ "<input type='submit' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='finish' value='送出' /></div>"
 				+ "<div class='pull-left'>"
-				+ "<input type='button' class='btn btn-previous btn-fill btn-default btn-wd btn-sm' name='previous' value='Previous' /></div>"
+				+ "<input type='button' class='btn btn-previous btn-fill btn-default btn-wd btn-sm' name='previous' value='上一頁' /></div>"
 				+ "<div class='clearfix'></div></div></form></div></div></div></div></div>");
 		
         out.write("<div class='footer'><div class='container'></div></div></div>");

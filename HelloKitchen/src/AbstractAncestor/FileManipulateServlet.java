@@ -120,7 +120,7 @@ public class FileManipulateServlet extends HttpServlet {
 	}
     /*資料庫檔案路徑的檔名抽取*/
 	protected String extraFlieName(String databaseFilePath) {
-		String[] sp = databaseFilePath.split("\\\\");
+		String[] sp = databaseFilePath.split("/");
 		String last = sp[sp.length - 1];
 		return last;
 	}

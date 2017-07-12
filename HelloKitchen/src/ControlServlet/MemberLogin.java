@@ -139,7 +139,11 @@ public class MemberLogin extends HttpServlet {
 				}
 
 				// --------- 創建成功 -----
-				request.getRequestDispatcher("/index.jsp").forward(request, response);
+				out.println("<div id='alert' style='position: fixed;top:2%;left: 40%;min-width: 20%;z-index: 99999;padding: 15px;border: 1px solid transparent;border-radius: 4px;text-align:center;color: #000000;background-color:#e5e5e5;'></div>");
+				out.println("<script type=\"text/javascript\">");
+				out.println("document.getElementById('alert').innerHTML='註冊成功';");
+				out.println("setTimeout(function(){location.href='index.jsp'}, 2000 );");
+				out.println("</script>");
 			}
 		} 
 		

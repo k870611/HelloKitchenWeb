@@ -202,7 +202,7 @@ public class MemberFactory extends AccountManager implements java.io.Serializabl
 				Member tempM = new Member(rs.getNString("member_id"), rs.getNString("member_name"),
 						rs.getNString("member_email"), rs.getNString("member_password"), rs.getNString("member_tel"),
 						rs.getNString("member_fb"));
-				this.hereDataSet.put(tempM.getMember_id().toString(), tempM);
+				this.hereDataSet.put(tempM.getMember_id().toString().toLowerCase(), tempM);
 				count++;
 			}
 			rs.close();
